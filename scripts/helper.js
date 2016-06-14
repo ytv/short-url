@@ -3,8 +3,7 @@ var validUrl = require('valid-url'),
     // config = require('../config');
 
 var server = process.env.SERVER,
-    dbUrl = process.env.MONGOLAB_URI,
-    dbCollection = process.env.MONGOLAB_DBCOLLECTION;
+    dbUrl = process.env.MONGOLAB_URI;
 
 module.exports = {
     // Randomly generate unique 4 digits number as the path
@@ -28,7 +27,7 @@ module.exports = {
                 console.log('Unable to connect to mongoDB server. Error:', err);
             else {
                 console.log('Connection established to', dbUrl);
-                var urls = db.collection(dbCollection);
+                var urls = db.collection('urls');
 
                 // If parameter is a valid url format
                 if(validUrl.isWebUri(param)) {
