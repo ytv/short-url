@@ -1,6 +1,6 @@
 var validUrl = require('valid-url'),
     mongo = require('mongodb').MongoClient,
-    config = require('../config');
+    // config = require('../config');
 
 var server = config.db.server || process.env.SERVER,
     dbUrl = config.db.host || process.env.MONGOLAB_URI,
