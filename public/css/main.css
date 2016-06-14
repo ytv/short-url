@@ -1,0 +1,28 @@
+body {
+    font: 18px Arial;
+    margin: 0 5%;
+}
+
+.content {
+    padding: 3%;
+    background-color: #eeeef6;
+}
+
+.example {
+    margin-left: 5%;
+}
+section {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+ul li {
+    color: #0000ff;
+}

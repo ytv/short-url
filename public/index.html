@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="css/main.css">
+    <title>URL Shortener Microservice</title>
+</head>
+<body>
+    <h1>URL Shortener Microservice</h1>
+    <div class="content">
+        <section class="usage">
+            <h3>Usage</h3>
+                <ol>
+                    <li>Pass a URL as a parameter to receive a shortened URL in the JSON response.</li>
+                    <li>If the URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.</li>
+                    <li>Visiting the shortened URL will redirect you to the original link</li>
+                </ol>
+        </section>
+        <h3>Example</h3>
+        <div class="example">
+            <section>
+                <h4>Create Shortened URL:</h4>
+                <ul>
+                    <!-- <li>http://timestamp-ytv.herokuapp.com/1467844008</li> -->
+                </ul>
+            </section>
+            <section>
+                <h4>JSON Output:</h4>
+                <ul>
+                    <!-- <li>{"unix":1467844008,"natural":"June 6, 2016"}</li> -->
+                </ul>
+            </section>
+            <section>
+                <h4>New Shortened URL:</h4>
+                <ul>
+                    <!-- <li>{"unix":1467844008,"natural":"June 6, 2016"}</li> -->
+                </ul>
+            </section>
+            <section>
+                <h4>Will Redirect to:</h4>
+                <ul>
+                    <!-- <li>{"unix":1467844008,"natural":"June 6, 2016"}</li> -->
+                </ul>
+            </section>
+        </div>
+    </div>
+</body>
