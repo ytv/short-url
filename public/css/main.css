@@ -17,6 +17,7 @@ section {
 
 ul {
     list-style-type: none;
+    font: 16px monospace;
 }
 
 li {
