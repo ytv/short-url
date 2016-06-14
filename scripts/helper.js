@@ -2,9 +2,9 @@ var validUrl = require('valid-url'),
     mongo = require('mongodb').MongoClient;
     // config = require('../config');
 
-var server = config.db.server || process.env.SERVER,
-    dbUrl = config.db.host || process.env.MONGOLAB_URI,
-    dbCollection = config.db.collection || process.env.MONGOLAB_DBCOLLECTION;
+var server = process.env.SERVER,
+    dbUrl = process.env.MONGOLAB_URI,
+    dbCollection = process.env.MONGOLAB_DBCOLLECTION;
 
 module.exports = {
     // Randomly generate unique 4 digits number as the path
