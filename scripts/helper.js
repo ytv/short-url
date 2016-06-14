@@ -1,5 +1,5 @@
 var validUrl = require('valid-url'),
-    mongo = require('mongodb').MongoClient,
+    mongo = require('mongodb').MongoClient;
     // config = require('../config');
 
 var server = config.db.server || process.env.SERVER,
