@@ -1,9 +1,9 @@
 var validUrl = require('valid-url'),
     mongo = require('mongodb').MongoClient;
-    // config = require('../config');
+    config = require('../config');
 
-var server = process.env.SERVER,
-    dbUrl = process.env.MONGOLAB_URI;
+var server = process.env.SERVER || config.server,
+    dbUrl = process.env.MONGOLAB_URI || config.db.host;
 
 module.exports = {
     // Randomly generate unique 4 digits number as the path
@@ -40,11 +40,11 @@ module.exports = {
                         /* If it does not exist in the db, add original URL and
                             generated new shortened path to db */
                         if(documents.length === 0) {
-                            var shortUrl = server + module.exports._gen_random(urls);
+                            var shortUrl = module.exports._gen_random(urls);
                             urls.insert({original_url: param,
                                          new_path: shortUrl}, function(err, data) {
                                 if(err) throw err;
-                                callback(db, res, origUrl, shortUrl);
+                                callback(db, res, origUrl, server + shortUrl);
                             });
                         // Otherwise get the existing shortened path from the db
                         } else {
